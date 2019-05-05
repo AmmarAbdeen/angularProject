@@ -1,0 +1,22 @@
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" ngModel name="requried1" #requried1="ngModel" id="exampleInputEmail1" email required placeholder="Enter email">
+    <div *ngIf="requried1.touched && requried1.invalid" class="alert alert-danger">
+      <div *ngIf="requried1.errors.required">please enter your email</div>
+      <div *ngIf="requried1?.errors?.email">this is not mail</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" ngModel name="requried2" #requried2="ngModel" id="exampleInputPassword1" required minlength="8"  
+      placeholder="Password">
+    <div *ngIf="requried2.touched && requried2.invalid" class="alert alert-danger">
+      <div *ngIf="requried2?.errors?.required">please enter your password</div>
+      <div *ngIf="requried2?.errors?.minlength">at least 8 character</div>
+    </div>
+
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
