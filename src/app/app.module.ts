@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
+// import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CustomFormsModule } from 'ng2-validation';
 import { LoginReactiveComponent } from './login-reactive/login-reactive.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -13,6 +15,10 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { MatTableComponent } from './mat-table/mat-table.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +30,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     MyOrdersComponent,
     AdminProductsComponent,
     AdminOrdersComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    MatTableComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +39,10 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     CustomFormsModule,
     ReactiveFormsModule,
     NgbModule,
-    FormsModule
+    MatButtonModule, MatCheckboxModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MDBBootstrapModule
   ],
   providers: [],
   bootstrap: [AppComponent]
