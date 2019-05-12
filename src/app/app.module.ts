@@ -15,9 +15,11 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { MatTableComponent } from './mat-table/mat-table.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MatTableAngMaterialComponent } from './mat-table-ang-material/mat-table-ang-material.component';
+import { MatTableModule, MatFormFieldModule, MatInputModule, MatSortModule, MatPaginatorModule } from '@angular/material';
+
 
 
 @NgModule({
@@ -31,7 +33,10 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     AdminProductsComponent,
     AdminOrdersComponent,
     ShoppingCartComponent,
-    MatTableComponent
+    MatTableComponent,
+    MatTableAngMaterialComponent,
+    
+ 
   ],
   imports: [
     BrowserModule,
@@ -39,10 +44,14 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     CustomFormsModule,
     ReactiveFormsModule,
     NgbModule,
-    MatButtonModule, MatCheckboxModule,
     BrowserAnimationsModule,
     FormsModule,
-    MDBBootstrapModule
+    MDBBootstrapModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSortModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
